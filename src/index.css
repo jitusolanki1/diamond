@@ -1,0 +1,176 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-main: #ffffff;
+    --surface-1: #f4f9fb;
+    --surface-2: #e8f2f6;
+    --surface-border: #d0e2ec;
+    --primary: #05435A;
+    --primary-hover: #043649;
+    --blue-header: #05435A;
+    --blue-deep: #032b3a;
+    --blue-midnight: #020018;
+    --blue-accent: #0284c7;
+    --gold: #edd315;
+    --gold-light: #fefde8;
+    --emerald-cta: #0BA281;
+    --text-main: #05435A;
+    --text-muted: #537482;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    color-scheme: light;
+  }
+
+  body {
+    background-color: #ffffff;
+    color: #0f172a;
+    font-family: 'Outfit', 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .font-serif-display {
+    font-family: 'Cinzel', Georgia, 'Times New Roman', serif;
+  }
+
+  .font-serif-classic {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+  }
+}
+
+/* Smooth light scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #f8fafc;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Keyframes for Odds Marquee */
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 35s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* Background Animated Laser Lines */
+@keyframes beam-h {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(1000%);
+  }
+}
+
+@keyframes beam-v {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(1000%);
+  }
+}
+
+/* Authentic Horizontal Earth Rotation */
+@keyframes spin-earth {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-spin-earth {
+  animation: spin-earth 18s linear infinite;
+}
+
+/* World Transmission Pop Animation for Globe Signals */
+@keyframes world-pop {
+  0% {
+    opacity: 0;
+    transform: translateY(12px) scale(0.92);
+    pointer-events: none;
+  }
+  6% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    pointer-events: auto;
+  }
+  25% {
+    opacity: 1;
+    transform: translateY(-2px) scale(1);
+    pointer-events: auto;
+  }
+  32% {
+    opacity: 0;
+    transform: translateY(-8px) scale(0.95);
+    pointer-events: none;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(12px) scale(0.92);
+    pointer-events: none;
+  }
+}
+
+.animate-world-pop {
+  animation: world-pop 15s cubic-bezier(0.16, 1, 0.3, 1) infinite;
+}
+
+/* Simple, clean scroll reveal using Intersection Observer */
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.reveal-on-scroll.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal-on-scroll {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}
+
+/* Hide scrollbar utility */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
