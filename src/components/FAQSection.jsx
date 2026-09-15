@@ -17,16 +17,16 @@ export default function FAQSection({ openWhatsApp }) {
   });
 
   return (
-    <section id="faq" className="py-16 sm:py-20 bg-white border-b border-slate-200">
+    <section id="faq" className="py-16 sm:py-20 bg-white border-b border-[#d0e2ec]">
       <div className="max-w-3xl mx-auto px-4 sm:px-6">
         
         {/* Header */}
         <div className="text-center mb-10 reveal-on-scroll">
-          <div className="text-xs font-serif-display font-bold text-[#9d7837] uppercase tracking-widest mb-1.5 flex items-center justify-center gap-1.5">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#9d7837]" />
+          <div className="text-xs font-serif-display font-bold text-[#05435A] uppercase tracking-widest mb-1.5 flex items-center justify-center gap-1.5">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#05435A]" />
             <span>Exchange Clarifications & Protocol</span>
           </div>
-          <h2 className="font-serif-display text-2xl sm:text-3xl font-bold text-slate-900 tracking-tight">
+          <h2 className="font-serif-display text-2xl sm:text-3xl font-extrabold text-[#05435A] tracking-tight">
             Frequently Asked Questions
           </h2>
           <p className="text-sm text-slate-600 mt-1">
@@ -42,7 +42,7 @@ export default function FAQSection({ openWhatsApp }) {
             placeholder="Search questions (e.g. ID, withdrawal, legal, bonus)..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            className="w-full pl-10 pr-3 py-2.5 rounded-xs bg-white border border-slate-300 text-xs sm:text-sm text-slate-900 placeholder-slate-400 focus:border-slate-900 focus:outline-none shadow-xs"
+            className="w-full pl-10 pr-3 py-2.5 rounded-xs bg-white border border-[#d0e2ec] text-xs sm:text-sm text-slate-900 placeholder-slate-400 focus:border-[#05435A] focus:outline-none shadow-xs"
           />
         </div>
 
@@ -54,8 +54,8 @@ export default function FAQSection({ openWhatsApp }) {
               onClick={() => setSelectedCategory(cat)}
               className={`px-3 py-1.5 rounded-xs text-xs font-medium tracking-wide cursor-pointer shrink-0 transition-colors ${
                 selectedCategory === cat
-                  ? 'bg-slate-900 text-white border border-slate-900 shadow-xs'
-                  : 'bg-white text-slate-700 border border-slate-300 hover:bg-slate-50'
+                  ? 'bg-[#05435A] text-white border border-[#05435A] shadow-xs'
+                  : 'bg-white text-slate-700 border border-[#d0e2ec] hover:bg-[#f4f9fb]'
               }`}
             >
               {cat}
@@ -71,22 +71,22 @@ export default function FAQSection({ openWhatsApp }) {
             return (
               <div
                 key={idx}
-                className="bg-white rounded-sm border border-slate-200 overflow-hidden shadow-xs"
+                className="bg-white rounded-sm border border-[#d0e2ec] overflow-hidden shadow-xs"
               >
                 <button
                   onClick={() => setOpenIndex(isOpen ? null : idx)}
-                  className="w-full p-4 text-left flex items-center justify-between text-xs sm:text-sm font-serif-display font-semibold text-slate-900 hover:bg-slate-50 cursor-pointer transition-colors"
+                  className="w-full p-4 text-left flex items-center justify-between text-xs sm:text-sm font-serif-display font-semibold text-slate-900 hover:bg-[#f4f9fb] cursor-pointer transition-colors"
                 >
                   <span className="pr-2">{faq.q}</span>
                   {isOpen ? (
-                    <ChevronUp className="w-4 h-4 text-[#9d7837] shrink-0" />
+                    <ChevronUp className="w-4 h-4 text-[#05435A] shrink-0" />
                   ) : (
                     <ChevronDown className="w-4 h-4 text-slate-400 shrink-0" />
                   )}
                 </button>
 
                 {isOpen && (
-                  <div className="px-4 pb-4 pt-1 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100 bg-[#faf9f6]">
+                  <div className="px-4 pb-4 pt-1 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-[#d0e2ec] bg-[#f4f9fb]">
                     {faq.a}
                   </div>
                 )}
@@ -96,13 +96,13 @@ export default function FAQSection({ openWhatsApp }) {
         </div>
 
         {/* Help box */}
-        <div className="p-5 rounded-sm bg-[#faf9f6] border border-slate-200 text-center text-xs shadow-xs">
+        <div className="p-5 rounded-sm bg-[#f4f9fb] border border-[#d0e2ec] text-center text-xs shadow-xs">
           <span className="text-slate-600 font-medium">Still have questions? </span>
           <button
             onClick={() => openWhatsApp('FAQ Inquiry')}
-            className="text-[#8a6a2a] font-bold hover:underline cursor-pointer ml-1 inline-flex items-center gap-1"
+            className="text-[#05435A] font-bold hover:text-[#0BA281] hover:underline cursor-pointer ml-1 inline-flex items-center gap-1"
           >
-            <MessageCircle className="w-3.5 h-3.5 text-[#9d7837]" />
+            <MessageCircle className="w-3.5 h-3.5 text-[#0BA281]" />
             <span>Chat with our support team on WhatsApp</span>
           </button>
         </div>

@@ -29,28 +29,29 @@ export default function AuthModals({ mode = 'register', onClose, openWhatsApp })
         {/* Header */}
         <div className="flex items-center justify-between pb-3.5 border-b border-slate-100 mb-4">
           <div className="flex items-center gap-2">
-            <div className="w-6 h-6 rounded-lg bg-indigo-50 text-indigo-600 flex items-center justify-center">
+            <div className="w-6 h-6 rounded-lg bg-[#e8f2f6] text-[#05435A] flex items-center justify-center">
               {currentMode === 'register' ? <User className="w-3.5 h-3.5" /> : <Lock className="w-3.5 h-3.5" />}
             </div>
-            <h3 className="text-sm font-extrabold text-slate-900 uppercase tracking-wider">
+            <h3 className="text-sm font-extrabold text-[#05435A] uppercase tracking-wider">
               {currentMode === 'register' ? 'Request Diamond ID' : 'Account Login'}
             </h3>
           </div>
           <button
             onClick={onClose}
-            className="p-1 rounded-lg text-slate-400 hover:text-slate-700 hover:bg-slate-100 transition-colors cursor-pointer"
+            className="p-1 rounded-full text-slate-400 hover:text-slate-600 hover:bg-slate-100 transition-colors cursor-pointer"
           >
             <X className="w-4 h-4" />
           </button>
         </div>
 
+        {/* Modal Body */}
         {isSuccess ? (
-          <div className="text-center py-4 space-y-3 text-xs">
+          <div className="text-center py-4 space-y-3">
             <div className="w-12 h-12 rounded-full bg-emerald-50 text-emerald-600 flex items-center justify-center mx-auto">
-              <CheckCircle2 className="w-7 h-7" />
+              <CheckCircle2 className="w-6 h-6" />
             </div>
-            <h4 className="text-base font-extrabold text-slate-900">
-              {currentMode === 'register' ? 'ID Request Submitted' : 'Login Verified'}
+            <h4 className="font-serif-display text-base font-bold text-slate-900">
+              Request Received!
             </h4>
             <p className="text-slate-600 leading-relaxed font-normal">
               {currentMode === 'register'
@@ -62,7 +63,7 @@ export default function AuthModals({ mode = 'register', onClose, openWhatsApp })
                 onClose();
                 if (currentMode === 'register') openWhatsApp('ID Verification');
               }}
-              className="w-full py-3 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-bold cursor-pointer transition-all shadow-sm shadow-indigo-200"
+              className="w-full py-3 rounded-xl bg-[#0BA281] hover:bg-[#0e8f73] text-white font-bold cursor-pointer transition-all shadow-sm"
             >
               Continue to WhatsApp Desk
             </button>
@@ -76,18 +77,18 @@ export default function AuthModals({ mode = 'register', onClose, openWhatsApp })
                 onClick={() => setCurrentMode('register')}
                 className={`py-2 rounded-lg text-xs font-bold transition-all cursor-pointer ${
                   currentMode === 'register' 
-                    ? 'bg-white text-indigo-700 shadow-2xs' 
+                    ? 'bg-[#05435A] text-white shadow-2xs' 
                     : 'text-slate-600 hover:text-slate-900'
                 }`}
               >
-                Request ID
+                Get ID
               </button>
               <button
                 type="button"
                 onClick={() => setCurrentMode('login')}
                 className={`py-2 rounded-lg text-xs font-bold transition-all cursor-pointer ${
                   currentMode === 'login' 
-                    ? 'bg-white text-indigo-700 shadow-2xs' 
+                    ? 'bg-[#05435A] text-white shadow-2xs' 
                     : 'text-slate-600 hover:text-slate-900'
                 }`}
               >
@@ -139,7 +140,7 @@ export default function AuthModals({ mode = 'register', onClose, openWhatsApp })
                       required
                       checked={formData.jurisdictionConfirmed}
                       onChange={(e) => setFormData({ ...formData, jurisdictionConfirmed: e.target.checked })}
-                      className="mt-0.5 accent-indigo-600 rounded"
+                      className="mt-0.5 accent-[#05435A] rounded"
                     />
                     <span>I confirm participation is permitted in my jurisdiction.</span>
                   </label>
@@ -155,7 +156,7 @@ export default function AuthModals({ mode = 'register', onClose, openWhatsApp })
                     value={formData.diamondId}
                     onChange={(e) => setFormData({ ...formData, diamondId: e.target.value })}
                     placeholder="e.g. DIA-12345"
-                    className="w-full bg-slate-50 border border-slate-200 rounded-xl p-2.5 text-slate-900 focus:bg-white focus:border-indigo-600 focus:outline-none font-mono text-xs font-bold shadow-2xs"
+                    className="w-full bg-slate-50 border border-slate-200 rounded-xl p-2.5 text-slate-900 focus:bg-white focus:border-[#05435A] focus:outline-none font-mono text-xs font-bold shadow-2xs"
                   />
                 </div>
 
@@ -167,7 +168,7 @@ export default function AuthModals({ mode = 'register', onClose, openWhatsApp })
                     value={formData.password}
                     onChange={(e) => setFormData({ ...formData, password: e.target.value })}
                     placeholder="••••••••"
-                    className="w-full bg-slate-50 border border-slate-200 rounded-xl p-2.5 text-slate-900 focus:bg-white focus:border-indigo-600 focus:outline-none shadow-2xs font-medium"
+                    className="w-full bg-slate-50 border border-slate-200 rounded-xl p-2.5 text-slate-900 focus:bg-white focus:border-[#05435A] focus:outline-none shadow-2xs font-medium"
                   />
                 </div>
 
@@ -175,7 +176,7 @@ export default function AuthModals({ mode = 'register', onClose, openWhatsApp })
                   <button
                     type="button"
                     onClick={() => openWhatsApp('Forgot Password')}
-                    className="text-[11px] text-indigo-600 font-semibold hover:underline cursor-pointer"
+                    className="text-[11px] text-[#05435A] font-semibold hover:text-[#0BA281] hover:underline cursor-pointer"
                   >
                     Forgot Password?
                   </button>
@@ -185,7 +186,7 @@ export default function AuthModals({ mode = 'register', onClose, openWhatsApp })
 
             <button
               type="submit"
-              className="w-full py-3 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-bold cursor-pointer transition-all shadow-sm shadow-indigo-200 mt-2"
+              className="w-full py-3 rounded-xl bg-[#0BA281] hover:bg-[#0e8f73] text-white font-bold cursor-pointer transition-all shadow-sm mt-2"
             >
               {currentMode === 'register' ? 'Submit ID Request' : 'Login to Account'}
             </button>

@@ -58,11 +58,11 @@ export default function GamesSection({ onGetId }) {
         {/* Header */}
         <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-8 gap-4 reveal-on-scroll">
           <div>
-            <div className="text-xs font-serif-display font-bold text-[#9d7837] uppercase tracking-widest mb-1.5 flex items-center gap-1.5">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#9d7837]" />
+            <div className="text-xs font-serif-display font-bold text-[#05435A] uppercase tracking-widest mb-1.5 flex items-center gap-1.5">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#05435A]" />
               <span>Live Dealer Tables & Interactive Salons</span>
             </div>
-            <h2 className="font-serif-display text-2xl sm:text-3xl font-bold text-slate-900 tracking-tight">
+            <h2 className="font-serif-display text-2xl sm:text-3xl font-extrabold text-[#05435A] tracking-tight">
               Casino & Card Tables
             </h2>
 
@@ -73,14 +73,14 @@ export default function GamesSection({ onGetId }) {
             <button
               onClick={() => scrollCarousel('left')}
               aria-label="Previous Games"
-              className="p-2 rounded-xs bg-white border border-slate-300 text-slate-700 hover:bg-slate-50 cursor-pointer transition-colors shadow-xs"
+              className="p-2 rounded-xs bg-white border border-[#d0e2ec] text-[#05435A] hover:bg-[#f4f9fb] cursor-pointer transition-colors shadow-xs"
             >
               <ChevronLeft className="w-4 h-4" />
             </button>
             <button
               onClick={() => scrollCarousel('right')}
               aria-label="Next Games"
-              className="p-2 rounded-xs bg-white border border-slate-300 text-slate-700 hover:bg-slate-50 cursor-pointer transition-colors shadow-xs"
+              className="p-2 rounded-xs bg-white border border-[#d0e2ec] text-[#05435A] hover:bg-[#f4f9fb] cursor-pointer transition-colors shadow-xs"
             >
               <ChevronRight className="w-4 h-4" />
             </button>
@@ -116,17 +116,17 @@ export default function GamesSection({ onGetId }) {
                   </div>
 
                   {/* Feature Tag */}
-                  <div className="absolute top-2.5 right-2.5 bg-slate-900/90 text-[#d4af37] px-2 py-0.5 rounded-xs text-[10px] font-bold border border-slate-700 tracking-wider uppercase font-serif-display">
+                  <div className="absolute top-2.5 right-2.5 bg-[#05435A]/95 text-[#edd315] px-2 py-0.5 rounded-xs text-[10px] font-bold border border-[#085a78] tracking-wider uppercase font-serif-display">
                     {game.tag}
                   </div>
 
                   {/* Dealer Info */}
                   <div className="absolute bottom-2 left-2.5 right-2.5 flex items-center justify-between text-xs text-white">
                     <div className="flex items-center gap-1.5">
-                      <Video className="w-3.5 h-3.5 text-[#d4af37]" />
+                      <Video className="w-3.5 h-3.5 text-[#edd315]" />
                       <span className="font-medium text-[11px] truncate">{game.dealer}</span>
                     </div>
-                    <span className="bg-slate-900/95 px-2 py-0.5 rounded-xs text-[10px] font-bold border border-slate-700">
+                    <span className="bg-[#05435A]/95 text-emerald-400 px-2 py-0.5 rounded-xs text-[10px] font-bold border border-[#085a78]">
                       LIVE
                     </span>
                   </div>
@@ -140,10 +140,10 @@ export default function GamesSection({ onGetId }) {
                   {game.description}
                 </p>
 
-                <div className="flex justify-between p-2 rounded-xs bg-slate-50 border border-slate-200 text-xs mb-4">
+                <div className="flex justify-between p-2 rounded-xs bg-[#f4f9fb] border border-[#d0e2ec] text-xs mb-4">
                   <div>
                     <span className="text-slate-500 block text-[9px] font-serif-display uppercase tracking-wider font-bold">MIN STAKE</span>
-                    <span className="text-[#8a6a2a] font-bold font-mono text-xs">{game.minLimit}</span>
+                    <span className="text-[#05435A] font-bold font-mono text-xs">{game.minLimit}</span>
                   </div>
                   <div>
                     <span className="text-slate-500 block text-[9px] font-serif-display uppercase tracking-wider font-bold">MAX STAKE</span>

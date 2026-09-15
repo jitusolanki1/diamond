@@ -4,16 +4,16 @@ import { RESPONSIBLE_GAMING_RULES } from '../data/siteData';
 
 export default function ResponsibleGamingSection({ openWhatsApp }) {
   return (
-    <section id="responsible-gaming" className="py-16 sm:py-20 bg-white border-b border-slate-200">
+    <section id="responsible-gaming" className="py-16 sm:py-20 bg-white border-b border-[#d0e2ec]">
       <div className="max-w-4xl mx-auto px-4 sm:px-6">
 
         {/* Header */}
         <div className="text-center mb-10 reveal-on-scroll">
-          <div className="text-xs font-serif-display font-bold text-[#9d7837] uppercase tracking-widest mb-1.5 flex items-center justify-center gap-1.5">
-            <HeartHandshake className="w-3.5 h-3.5 text-[#9d7837]" />
+          <div className="text-xs font-serif-display font-bold text-[#05435A] uppercase tracking-widest mb-1.5 flex items-center justify-center gap-1.5">
+            <HeartHandshake className="w-3.5 h-3.5 text-[#05435A]" />
             <span>Player Protection Policy</span>
           </div>
-          <h2 className="font-serif-display text-2xl sm:text-3xl font-bold text-slate-900 tracking-tight">
+          <h2 className="font-serif-display text-2xl sm:text-3xl font-extrabold text-[#05435A] tracking-tight">
             Responsible Gaming & Risk Notice
           </h2>
           <p className="text-sm text-slate-600 mt-1">
@@ -22,11 +22,11 @@ export default function ResponsibleGamingSection({ openWhatsApp }) {
         </div>
 
         {/* Mandatory Warning Box */}
-        <div className="p-5 rounded-sm bg-[#faf9f6] border border-[#d4af37]/35 mb-8 text-slate-900 shadow-xs">
+        <div className="p-5 rounded-sm bg-[#f4f9fb] border border-[#085a78]/25 mb-8 text-slate-900 shadow-xs">
           <div className="flex items-start gap-3">
-            <AlertTriangle className="w-5 h-5 text-[#9d7837] shrink-0 mt-0.5" />
+            <AlertTriangle className="w-5 h-5 text-[#05435A] shrink-0 mt-0.5" />
             <div>
-              <h3 className="text-xs font-serif-display font-bold uppercase tracking-wider mb-1 text-slate-900">
+              <h3 className="text-xs font-serif-display font-bold uppercase tracking-wider mb-1 text-[#05435A]">
                 Statutory Warning & Legal Eligibility
               </h3>
               <p className="text-sm leading-relaxed font-semibold text-slate-800">
@@ -40,9 +40,9 @@ export default function ResponsibleGamingSection({ openWhatsApp }) {
         {/* 5 Simple Rules Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
           {RESPONSIBLE_GAMING_RULES.map((r, idx) => (
-            <div key={idx} className="p-4 rounded-sm bg-white border border-slate-200 shadow-xs">
+            <div key={idx} className="p-4 rounded-sm bg-white border border-[#d0e2ec] shadow-xs">
               <h4 className="text-xs font-serif-display font-bold text-slate-900 mb-1.5 flex items-center gap-2">
-                <span className="w-1.5 h-1.5 rounded-full bg-[#9d7837]" />
+                <span className="w-1.5 h-1.5 rounded-full bg-[#05435A]" />
                 <span>{r.rule}</span>
               </h4>
               <p className="text-xs text-slate-600 leading-relaxed font-normal">
@@ -53,14 +53,14 @@ export default function ResponsibleGamingSection({ openWhatsApp }) {
         </div>
 
         {/* Self Exclusion & Support Strip */}
-        <div className="p-5 rounded-sm bg-[#faf9f6] border border-slate-200 shadow-xs flex flex-col sm:flex-row items-center justify-between gap-4 text-xs">
+        <div className="p-5 rounded-sm bg-[#f4f9fb] border border-[#d0e2ec] shadow-xs flex flex-col sm:flex-row items-center justify-between gap-4 text-xs">
           <div className="text-slate-700">
-            <strong className="text-slate-900 block font-serif-display font-bold mb-0.5">Need to take a break or set a deposit limit?</strong>
+            <strong className="text-[#05435A] block font-serif-display font-bold mb-0.5">Need to take a break or set a deposit limit?</strong>
             Contact our dedicated support specialists to activate a 24-hour cooling-off pause or permanent self-exclusion.
           </div>
           <button
             onClick={() => openWhatsApp('Self-Exclusion or Deposit Limits')}
-            className="px-5 py-2.5 rounded-xs bg-slate-900 hover:bg-slate-800 text-white font-bold uppercase tracking-wider cursor-pointer shrink-0 transition-colors shadow-xs"
+            className="px-5 py-2.5 rounded-full bg-[#0BA281] hover:bg-[#0e8f73] text-white font-bold uppercase tracking-wider cursor-pointer shrink-0 transition-colors shadow-xs"
           >
             Request Pause / Limit
           </button>

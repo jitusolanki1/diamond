@@ -64,7 +64,7 @@ export default function GetIdSection({ openWhatsApp }) {
   };
 
   return (
-    <section id="get-id" className="relative py-16 sm:py-20 bg-[#faf9f7] border-b border-slate-200 overflow-hidden">
+    <section id="get-id" className="relative py-16 sm:py-20 bg-[#f4f9fb] border-b border-[#d0e2ec] overflow-hidden">
       {/* Background Architectural Watermark Lines */}
       <AnimatedLines />
 
@@ -72,11 +72,11 @@ export default function GetIdSection({ openWhatsApp }) {
         
         {/* Header */}
         <div className="text-center max-w-2xl mx-auto mb-10 reveal-on-scroll">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-xs bg-[#fbf9f4] border border-[#d4af37]/30 text-xs font-bold text-[#8a6a2a] mb-2 font-serif-display uppercase tracking-wider">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#9d7837]" />
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-xs bg-[#e8f2f6] border border-[#085a78]/30 text-xs font-bold text-[#05435A] mb-2 font-serif-display uppercase tracking-wider">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#05435A]" />
             <span>Instant Verified Access</span>
           </div>
-          <h2 className="font-serif-display text-2xl sm:text-3xl font-bold text-slate-900 tracking-tight">
+          <h2 className="font-serif-display text-2xl sm:text-3xl font-extrabold text-[#05435A] tracking-tight">
             Get Your Official Diamond ID
           </h2>
           <p className="text-sm text-slate-600 mt-1 leading-relaxed">
@@ -144,7 +144,7 @@ export default function GetIdSection({ openWhatsApp }) {
           <div className="p-6 sm:p-8 md:col-span-7 bg-white flex flex-col justify-center">
             {isSuccess ? (
               <div className="text-center py-6 space-y-3">
-                <div className="w-12 h-12 rounded-xs bg-[#fbf9f4] text-[#9d7837] flex items-center justify-center mx-auto border border-[#d4af37]/30">
+                <div className="w-12 h-12 rounded-xs bg-[#e8f2f6] text-[#05435A] flex items-center justify-center mx-auto border border-[#085a78]/30">
                   <CheckCircle2 className="w-6 h-6" />
                 </div>
                 <h4 className="font-serif-display text-base font-bold text-slate-900">
@@ -156,10 +156,10 @@ export default function GetIdSection({ openWhatsApp }) {
                 <div className="pt-2">
                   <button
                     onClick={() => openWhatsApp(`ID Verification for ${encodeURIComponent(formData.name)}`)}
-                    className="px-5 py-2.5 rounded-xs bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs uppercase tracking-wider transition-colors cursor-pointer inline-flex items-center gap-2 shadow-xs"
+                    className="px-5 py-2.5 rounded-full bg-[#0BA281] hover:bg-[#0e8f73] text-white font-bold text-xs uppercase tracking-wider transition-colors cursor-pointer inline-flex items-center gap-2 shadow-xs"
                   >
                     <span>Connect on WhatsApp Now</span>
-                    <ArrowRight className="w-3.5 h-3.5 text-[#d4af37]" />
+                    <ArrowRight className="w-3.5 h-3.5 text-white" />
                   </button>
                 </div>
               </div>
@@ -170,11 +170,11 @@ export default function GetIdSection({ openWhatsApp }) {
                 <input type="hidden" name="source" value="Diamond Exchange - In-Page Section" />
 
                 <div>
-                  <h4 className="font-serif-display text-sm font-bold text-slate-900 mb-0.5">
+                  <h4 className="font-serif-display text-sm font-bold text-[#05435A] mb-0.5">
                     Enter Your Details
                   </h4>
                   <p className="text-xs text-slate-500 mb-3">
-                    Fill this form to request your verified ID.
+                    Fill this quick form or click directly below to get your ID on WhatsApp.
                   </p>
                 </div>
 
@@ -196,7 +196,7 @@ export default function GetIdSection({ openWhatsApp }) {
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                       placeholder="e.g. Rahul Sharma"
-                      className="w-full pl-9 pr-3 py-2 bg-slate-50 border border-slate-300 rounded-xs text-slate-900 focus:bg-white focus:border-slate-900 focus:outline-none font-medium"
+                      className="w-full pl-9 pr-3 py-2 bg-slate-50 border border-slate-300 rounded-xs text-slate-900 focus:bg-white focus:border-[#05435A] focus:outline-none font-medium"
                     />
                   </div>
                 </div>
@@ -212,7 +212,7 @@ export default function GetIdSection({ openWhatsApp }) {
                       value={formData.contact}
                       onChange={(e) => setFormData({ ...formData, contact: e.target.value })}
                       placeholder="+91 / Mobile number"
-                      className="w-full pl-9 pr-3 py-2 bg-slate-50 border border-slate-300 rounded-xs text-slate-900 focus:bg-white focus:border-slate-900 focus:outline-none font-medium"
+                      className="w-full pl-9 pr-3 py-2 bg-slate-50 border border-slate-300 rounded-xs text-slate-900 focus:bg-white focus:border-[#05435A] focus:outline-none font-medium"
                     />
                   </div>
                 </div>
@@ -225,7 +225,7 @@ export default function GetIdSection({ openWhatsApp }) {
                       required
                       checked={formData.ageConfirmed}
                       onChange={(e) => setFormData({ ...formData, ageConfirmed: e.target.checked })}
-                      className="mt-0.5 accent-slate-900 rounded-xs"
+                      className="mt-0.5 accent-[#05435A] rounded-xs"
                     />
                     <span>I confirm I am 18 years of age or older (Strict 18+ Only).</span>
                   </label>
@@ -237,29 +237,40 @@ export default function GetIdSection({ openWhatsApp }) {
                       required
                       checked={formData.jurisdictionConfirmed}
                       onChange={(e) => setFormData({ ...formData, jurisdictionConfirmed: e.target.checked })}
-                      className="mt-0.5 accent-slate-900 rounded-xs"
+                      className="mt-0.5 accent-[#05435A] rounded-xs"
                     />
                     <span>I confirm that participation is legally permitted in my jurisdiction.</span>
                   </label>
                 </div>
 
-                <button
-                  type="submit"
-                  disabled={isSubmitting}
-                  className="w-full py-2.5 rounded-xs bg-slate-900 hover:bg-slate-800 disabled:opacity-75 text-white font-bold uppercase tracking-wider cursor-pointer transition-colors flex items-center justify-center gap-2 text-xs shadow-xs"
-                >
-                  {isSubmitting ? (
-                    <>
-                      <Loader2 className="w-4 h-4 animate-spin text-[#d4af37]" />
-                      <span>Sending ID Request...</span>
-                    </>
-                  ) : (
-                    <>
-                      <span>Submit ID Request</span>
-                      <ArrowRight className="w-4 h-4 text-[#d4af37]" />
-                    </>
-                  )}
-                </button>
+                <div className="flex flex-col sm:flex-row gap-2.5 pt-1">
+                  <button
+                    type="submit"
+                    disabled={isSubmitting}
+                    className="flex-1 py-2.5 rounded-full bg-[#05435A] hover:bg-[#043649] disabled:opacity-75 text-white font-bold uppercase tracking-wider cursor-pointer transition-colors flex items-center justify-center gap-2 text-xs shadow-xs"
+                  >
+                    {isSubmitting ? (
+                      <>
+                        <Loader2 className="w-4 h-4 animate-spin text-[#edd315]" />
+                        <span>Sending Request...</span>
+                      </>
+                    ) : (
+                      <>
+                        <span>Submit Request</span>
+                        <ArrowRight className="w-4 h-4 text-[#edd315]" />
+                      </>
+                    )}
+                  </button>
+
+                  <button
+                    type="button"
+                    onClick={() => openWhatsApp('Direct Get ID Request')}
+                    className="flex-1 py-2.5 rounded-full bg-[#0BA281] hover:bg-[#0e8f73] text-white font-bold uppercase tracking-wider cursor-pointer transition-colors flex items-center justify-center gap-2 text-xs shadow-xs"
+                  >
+                    <MessageCircle className="w-4 h-4 text-white" />
+                    <span>Direct on WhatsApp</span>
+                  </button>
+                </div>
 
                 <p className="text-[11px] text-slate-500 text-center">
                   🔒 Data protected by SSL encryption & delivered via Formspree.

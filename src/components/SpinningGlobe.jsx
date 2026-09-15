@@ -5,8 +5,8 @@ export default function SpinningGlobe({ isBackground = false, className = '' }) 
     return (
       <div className={`relative w-full h-full flex items-center justify-center select-none ${className}`}>
         {/* Subtle Orbit Ring with Gold Satellite */}
-        <div className="absolute inset-0 rounded-full border border-[#d4af37]/25 animate-[spin_24s_linear_infinite]">
-          <div className="absolute -top-1.5 left-1/2 -translate-x-1/2 w-3 h-3 rounded-full bg-[#9d7837] shadow-xs flex items-center justify-center">
+        <div className="absolute inset-0 rounded-full border border-[#38bdf8]/40 animate-[spin_24s_linear_infinite]">
+          <div className="absolute -top-1.5 left-1/2 -translate-x-1/2 w-3 h-3 rounded-full bg-[#edd315] shadow-xs flex items-center justify-center">
             <span className="w-1.5 h-1.5 rounded-full bg-white animate-ping absolute" />
             <span className="w-1.5 h-1.5 rounded-full bg-white relative" />
           </div>
@@ -24,7 +24,7 @@ export default function SpinningGlobe({ isBackground = false, className = '' }) 
 
             {/* Continuous Rotating Continents Group (Transparent ocean base) */}
             <g clipPath="url(#earth-mask)">
-              <g className="animate-spin-earth fill-[#c5a880]">
+              <g className="animate-spin-earth fill-[#38bdf8]">
                 {/* First Set of World Continents */}
                 <g transform="translate(0, 0)">
                   {/* North America */}
@@ -59,7 +59,7 @@ export default function SpinningGlobe({ isBackground = false, className = '' }) 
               </g>
 
               {/* 3D Latitude and Longitude Grid Lines */}
-              <g stroke="#c5a880" strokeOpacity="0.38" strokeWidth="0.75" fill="none">
+              <g stroke="#38bdf8" strokeOpacity="0.4" strokeWidth="0.75" fill="none">
                 <ellipse cx="100" cy="100" rx="90" ry="98" />
                 <ellipse cx="100" cy="100" rx="60" ry="98" />
                 <ellipse cx="100" cy="100" rx="25" ry="98" />
@@ -80,14 +80,14 @@ export default function SpinningGlobe({ isBackground = false, className = '' }) 
       <div className="relative w-44 h-44 sm:w-52 sm:h-52 flex items-center justify-center">
         
         {/* Subtle Orbit Ring with Gold Satellite */}
-        <div className="absolute inset-0 rounded-full border border-[#d4af37]/30 animate-[spin_18s_linear_infinite]">
-          <div className="absolute -top-1 left-1/2 -translate-x-1/2 w-2 h-2 rounded-full bg-[#9d7837] shadow-xs flex items-center justify-center">
+        <div className="absolute inset-0 rounded-full border border-[#38bdf8]/40 animate-[spin_18s_linear_infinite]">
+          <div className="absolute -top-1 left-1/2 -translate-x-1/2 w-2 h-2 rounded-full bg-[#edd315] shadow-xs flex items-center justify-center">
             <span className="w-1 h-1 rounded-full bg-white" />
           </div>
         </div>
 
         {/* The 3D Earth Sphere */}
-        <div className="relative w-36 h-36 sm:w-44 sm:h-44 rounded-full overflow-hidden shadow-md border border-slate-700 bg-slate-900">
+        <div className="relative w-36 h-36 sm:w-44 sm:h-44 rounded-full overflow-hidden shadow-md border border-[#085a78] bg-[#043649]">
           
           <svg className="w-full h-full" viewBox="0 0 200 200">
             <defs>
@@ -99,18 +99,18 @@ export default function SpinningGlobe({ isBackground = false, className = '' }) 
               {/* Realistic 3D Sphere Shading */}
               <radialGradient id="earth-lighting" cx="30%" cy="25%" r="75%">
                 <stop offset="0%" stopColor="#ffffff" stopOpacity="0.25" />
-                <stop offset="50%" stopColor="#c5a880" stopOpacity="0.05" />
-                <stop offset="85%" stopColor="#0f172a" stopOpacity="0.6" />
-                <stop offset="100%" stopColor="#020617" stopOpacity="0.9" />
+                <stop offset="50%" stopColor="#0284c7" stopOpacity="0.1" />
+                <stop offset="85%" stopColor="#043649" stopOpacity="0.6" />
+                <stop offset="100%" stopColor="#022430" stopOpacity="0.9" />
               </radialGradient>
             </defs>
 
             {/* Ocean Base Layer */}
-            <circle cx="100" cy="100" r="99" fill="#0f172a" />
+            <circle cx="100" cy="100" r="99" fill="#043649" />
 
             {/* Continuous Rotating Continents Group */}
             <g clipPath="url(#earth-mask)">
-              <g className="animate-spin-earth fill-[#c5a880]/80">
+              <g className="animate-spin-earth fill-[#38bdf8]">
                 {/* First Set of World Continents */}
                 <g transform="translate(0, 0)">
                   {/* North America */}
@@ -163,8 +163,8 @@ export default function SpinningGlobe({ isBackground = false, className = '' }) 
       </div>
 
       {/* Clean Global Liquidity Micro-Badge */}
-      <div className="mt-3 flex items-center gap-2 px-3 py-1 rounded-xs bg-white border border-slate-200 text-[11px] font-medium text-slate-800 shadow-xs">
-        <span className="w-1.5 h-1.5 rounded-full bg-[#9d7837]" />
+      <div className="mt-3 flex items-center gap-2 px-3 py-1 rounded-xs bg-[#05435A] border border-[#085a78] text-[11px] font-medium text-white shadow-xs">
+        <span className="w-1.5 h-1.5 rounded-full bg-[#edd315]" />
         <span className="font-serif-display uppercase tracking-wider text-[10px]">Global In-Play Exchange • 24/7 Live</span>
       </div>
     </div>

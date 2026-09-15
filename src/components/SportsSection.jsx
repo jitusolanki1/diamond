@@ -60,11 +60,11 @@ export default function SportsSection({ onGetId }) {
         {/* Header */}
         <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-8 gap-4 reveal-on-scroll">
           <div>
-            <div className="text-xs font-serif-display font-bold text-[#9d7837] uppercase tracking-widest mb-1.5 flex items-center gap-1.5">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#9d7837]" />
+            <div className="text-xs font-serif-display font-bold text-[#05435A] uppercase tracking-widest mb-1.5 flex items-center gap-1.5">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#05435A]" />
               <span>Live & Upcoming Trading Markets</span>
             </div>
-            <h2 className="font-serif-display text-2xl sm:text-3xl font-bold text-slate-900 tracking-tight">
+            <h2 className="font-serif-display text-2xl sm:text-3xl font-extrabold text-[#05435A] tracking-tight">
               Exchange Sports Markets
             </h2>
           </div>
@@ -74,14 +74,14 @@ export default function SportsSection({ onGetId }) {
             <button
               onClick={() => scrollCarousel('left')}
               aria-label="Previous Markets"
-              className="p-2 rounded-xs bg-white border border-slate-300 text-slate-700 hover:bg-slate-50 cursor-pointer transition-colors shadow-xs"
+              className="p-2 rounded-xs bg-white border border-[#d0e2ec] text-[#05435A] hover:bg-[#f4f9fb] cursor-pointer transition-colors shadow-xs"
             >
               <ChevronLeft className="w-4 h-4" />
             </button>
             <button
               onClick={() => scrollCarousel('right')}
               aria-label="Next Markets"
-              className="p-2 rounded-xs bg-white border border-slate-300 text-slate-700 hover:bg-slate-50 cursor-pointer transition-colors shadow-xs"
+              className="p-2 rounded-xs bg-white border border-[#d0e2ec] text-[#05435A] hover:bg-[#f4f9fb] cursor-pointer transition-colors shadow-xs"
             >
               <ChevronRight className="w-4 h-4" />
             </button>
@@ -135,8 +135,8 @@ export default function SportsSection({ onGetId }) {
                 </h3>
 
                 {/* Status Bar */}
-                <div className="p-2 rounded-xs bg-slate-50 border border-slate-200 text-xs mb-3 flex justify-between items-center">
-                  <span className="text-[#8a6a2a] font-bold font-serif-display tracking-wide text-[11px]">
+                <div className="p-2 rounded-xs bg-[#f4f9fb] border border-[#d0e2ec] text-xs mb-3 flex justify-between items-center">
+                  <span className="text-[#05435A] font-bold font-serif-display tracking-wide text-[11px]">
                     {market.status}
                   </span>
                   <span className="text-slate-700 font-semibold text-[11px] truncate max-w-[140px]">
@@ -147,7 +147,7 @@ export default function SportsSection({ onGetId }) {
                 {/* Back / Lay Headers */}
                 <div className="grid grid-cols-5 text-xs font-serif-display tracking-wider font-bold mb-1 px-1 text-slate-700">
                   <div className="col-span-3 text-[11px] uppercase">Selection</div>
-                  <div className="text-center text-[#8a6a2a] text-[11px] uppercase">Back</div>
+                  <div className="text-center text-[#05435A] text-[11px] uppercase">Back</div>
                   <div className="text-center text-slate-700 text-[11px] uppercase">Lay</div>
                 </div>
 
@@ -163,7 +163,7 @@ export default function SportsSection({ onGetId }) {
                       </div>
                       <button
                         onClick={handleAction}
-                        className="py-1 px-2 rounded-xs bg-[#fbf9f4] text-[#8a6a2a] text-center font-mono font-bold hover:bg-[#f4efe4] cursor-pointer border border-[#d4af37]/35 transition-colors"
+                        className="py-1 px-2 rounded-xs bg-[#e8f2f6] text-[#05435A] text-center font-mono font-bold hover:bg-[#d0e2ec] cursor-pointer border border-[#085a78]/30 transition-colors"
                         title="Back this selection"
                       >
                         {sel.back}

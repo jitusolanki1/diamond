@@ -122,10 +122,10 @@ export default function OffersSection({ onGetId }) {
         </div>
 
         {/* Turnover Calculator */}
-        <div className="bg-[#faf9f6] rounded-sm border border-slate-200 p-6 max-w-2xl mx-auto shadow-xs">
-          <div className="flex items-center gap-2 mb-4 pb-2 border-b border-slate-200">
-            <Calculator className="w-4 h-4 text-[#9d7837]" />
-            <h3 className="font-serif-display text-xs font-bold text-slate-900 uppercase tracking-wider">
+        <div className="bg-[#f4f9fb] rounded-lg border border-[#d0e2ec] p-6 max-w-2xl mx-auto shadow-xs">
+          <div className="flex items-center gap-2 mb-4 pb-2 border-b border-[#d0e2ec]">
+            <Calculator className="w-4 h-4 text-[#05435A]" />
+            <h3 className="font-serif-display text-xs font-bold text-[#05435A] uppercase tracking-wider">
               Turnover Requirement Calculator
             </h3>
           </div>
@@ -137,7 +137,7 @@ export default function OffersSection({ onGetId }) {
                 type="number"
                 value={depositAmount}
                 onChange={(e) => setDepositAmount(Number(e.target.value) || 0)}
-                className="w-full bg-white border border-slate-300 rounded-xs p-2 text-slate-900 font-mono text-xs font-bold focus:border-slate-900 focus:outline-none"
+                className="w-full bg-white border border-[#d0e2ec] rounded-xs p-2 text-slate-900 font-mono text-xs font-bold focus:border-[#05435A] focus:outline-none"
               />
             </div>
 
@@ -146,7 +146,7 @@ export default function OffersSection({ onGetId }) {
               <select
                 value={rolloverMultiplier}
                 onChange={(e) => setRolloverMultiplier(Number(e.target.value))}
-                className="w-full bg-white border border-slate-300 rounded-xs p-2 text-slate-900 font-mono text-xs font-medium focus:border-slate-900 focus:outline-none"
+                className="w-full bg-white border border-[#d0e2ec] rounded-xs p-2 text-slate-900 font-mono text-xs font-medium focus:border-[#05435A] focus:outline-none"
               >
                 <option value={3}>3x (Weekly Sports)</option>
                 <option value={5}>5x (Table Bonus)</option>
@@ -155,9 +155,9 @@ export default function OffersSection({ onGetId }) {
             </div>
           </div>
 
-          <div className="mt-5 p-3.5 rounded-xs bg-white border border-slate-200 text-xs flex justify-between items-center shadow-xs">
+          <div className="mt-5 p-3.5 rounded-xs bg-white border border-[#d0e2ec] text-xs flex justify-between items-center shadow-xs">
             <span className="text-slate-600 font-medium">Total Bets Required Before Withdrawal:</span>
-            <span className="text-[#8a6a2a] font-bold font-mono text-sm">₹{requiredTurnover.toLocaleString('en-IN')}</span>
+            <span className="text-[#05435A] font-bold font-mono text-sm">₹{requiredTurnover.toLocaleString('en-IN')}</span>
           </div>
         </div>
 
